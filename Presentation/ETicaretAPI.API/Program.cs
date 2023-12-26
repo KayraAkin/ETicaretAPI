@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using ETicaretAPI.Application;
 using ETicaretAPI.Application.Repositries.CategoryRepository;
 using ETicaretAPI.Application.Repositries.CustomerRepository;
 using ETicaretAPI.Application.Repositries.ProductRepository;
@@ -16,7 +17,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddPersistenceServices();
+builder.Services.AddApplicationServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

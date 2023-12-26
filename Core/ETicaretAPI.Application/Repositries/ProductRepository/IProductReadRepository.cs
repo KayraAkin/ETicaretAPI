@@ -9,5 +9,6 @@ namespace ETicaretAPI.Application.Repositries.ProductRepository
 {
     public interface IProductReadRepository : IReadRepository<Product>
     {
+        
     }
 }
